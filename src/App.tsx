@@ -35,7 +35,7 @@ interface Provider {
 const providers: Provider[] = [
   {
     name: "Hierontaote",
-    locations: [Location.Kamppi],
+    locations: [Location.Tammisto, Location.Tikkurila],
     getUrl: (l, c, s) =>
       `https://nettivaraus5.ajas.fi/v/5970/?lid=15ed939dbfe6&palvelu=${s}&asiakaspalvelija=35&toimipiste=${l}`,
     services: [
@@ -85,7 +85,7 @@ const providers: Provider[] = [
   },
   {
     name: "Wario",
-    locations: [Location.Tammisto, Location.Tikkurila],
+    locations: [Location.Kamppi],
     getUrl: (l, c, s) =>
       `https://timma.fi/reservation/wario?category=${c}&service=${s}&user=5ca0e560fab66f013898a28f`,
     services: [
