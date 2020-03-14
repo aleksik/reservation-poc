@@ -285,6 +285,7 @@ const App = () => {
               id="category"
               disabled={!categories}
               onChange={onCategoryChange}
+              value={category ? category.id : "0"}
             >
               <option value="0">-- Valitse --</option>
               {categories.length > 0 &&
@@ -301,6 +302,7 @@ const App = () => {
               id="service"
               disabled={!services}
               onChange={onServiceChange}
+              value={service ? service.id : "0"}
             >
               <option value="0">-- Valitse --</option>
               {services.length > 0 &&
