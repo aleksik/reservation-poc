@@ -9,7 +9,7 @@ function enumValues<T>(t: T): ReadonlyArray<T[keyof T]> {
 
 enum Location {
   Kamppi = "Kamppi",
-  Taimisto = "Taimisto",
+  Tammisto = "Tammisto",
   Tikkurila = "Tikkurila"
 }
 
@@ -85,7 +85,7 @@ const providers: Provider[] = [
   },
   {
     name: "Wario",
-    locations: [Location.Taimisto, Location.Tikkurila],
+    locations: [Location.Tammisto, Location.Tikkurila],
     getUrl: (l, c, s) =>
       `https://timma.fi/reservation/wario?category=${c}&service=${s}&user=5ca0e560fab66f013898a28f`,
     services: [
@@ -179,7 +179,7 @@ const getLocationId = (location: Location) => {
   switch (location) {
     case Location.Kamppi:
       return 1;
-    case Location.Taimisto:
+    case Location.Tammisto:
       return 2;
     case Location.Tikkurila:
       return 1;
@@ -296,9 +296,9 @@ const App = () => {
             </select>
           </p>
           <p className={cn("form-item", { disabled: services.length === 0 })}>
-            <label htmlFor="category">Palvelu</label>
+            <label htmlFor="service">Palvelu</label>
             <select
-              id="category"
+              id="service"
               disabled={!services}
               onChange={onServiceChange}
             >
